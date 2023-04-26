@@ -1,0 +1,2 @@
+bundles:
+  - { name: Netresearch\HideUnavailableVariantsBundle\NetresearchHideUnavailableVariantsBundle, priority: 1010 }
