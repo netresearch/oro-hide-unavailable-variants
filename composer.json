@@ -22,9 +22,36 @@
         "php": ">=8.1",
         "oro/commerce": "5.0.*"
     },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "~3.13.2",
+        "oro/phpstan-rules": "^2.0",
+        "phpstan/extension-installer": "^1.2",
+        "rector/rector": "*",
+        "squizlabs/php_codesniffer": "~3.7.1"
+    },
     "autoload": {
         "psr-4": {
             "Netresearch\\HideUnavailableVariantsBundle\\": "src/"
+        }
+    },
+    "scripts": {
+        "phpcs": "phpcs --standard=PSR12 src",
+        "rector": "rector",
+        "phpstan": "phpstan analyze --level 7 -a vendor/autoload.php src",
+        "analysis": [
+            "@phpcs",
+            "@rector --dry-run --no-progress-bar",
+            "@phpstan --no-progress"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true,
+            "symfony/flex": true,
+            "symfony/runtime": true,
+            "phpstan/extension-installer": true
         }
     }
 }
