@@ -1,0 +1,25 @@
+{
+    "name": "netresearch/oro-hide-unavailable-variants-bundle",
+    "description": "This OroCommerce bundle hides attribute combinations of configurable products in the storefront, if an applicable variant product does not exist.",
+    "license": "OSL-3.0",
+    "type": "symfony-bundle",
+    "keywords": [
+        "Oro",
+        "Product",
+        "Variant",
+        "Store"
+    ],
+    "homepage": "https://www.netresearch.de/technologien/orocommerce/",
+    "authors": [
+        {
+            "name": "Netresearch DTT GmbH",
+            "email": "plugins@netresearch.de",
+            "role": "Manufacturer",
+            "homepage": "https://www.netresearch.de/"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "oro/commerce": "5.0.*"
+    }
+}

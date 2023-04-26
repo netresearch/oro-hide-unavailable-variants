@@ -1,0 +1,6 @@
+/README.html
+/vendor/
+/composer.lock
+.idea
+.project
+.settings
