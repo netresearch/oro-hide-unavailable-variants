@@ -14,6 +14,7 @@ use Oro\Bundle\ShoppingListBundle\Entity\ShoppingList;
 use Oro\Bundle\ShoppingListBundle\Manager\EmptyMatrixGridInterface;
 use Oro\Bundle\ShoppingListBundle\Manager\MatrixGridOrderManager;
 use Oro\Bundle\ShoppingListBundle\Model\MatrixCollection;
+use Oro\Bundle\ShoppingListBundle\Model\MatrixCollectionColumn;
 use Symfony\Component\PropertyAccess\PropertyAccessor;
 
 /**
@@ -39,31 +40,35 @@ class MatrixGridOrderManagerDecorator extends MatrixGridOrderManager
     {
         $matrixCollection = $this->decorated->getMatrixCollection($product, $shoppingList);
 
-        $newRows = [];
-        $columnsExist = [];
-
+        $availableCols = [];
         foreach ($matrixCollection->rows as $rowIndex => $row) {
-            foreach ($row->columns as $columnIndex => $column) {
-                if ($column->product !== null) {
-                    $newRows[$rowIndex] = $row;
-                    $columnsExist[$columnIndex] = true;
+            if ($row->columns === []) {
+                // remove rows without a variant product
+                unset($matrixCollection->rows[$rowIndex]);
+            } else {
+                // memorize the columns that have variant products
+                foreach ($row->columns as $colIndex => $col) {
+                    if ($col instanceof MatrixCollectionColumn) {
+                        $availableCols[$colIndex] = $matrixCollection->columns[$colIndex];
+                    }
                 }
             }
         }
 
-        $newRows = array_values($newRows);
+        // rearrange columnIndex
+        $matrixCollection->columns = array_values($availableCols);
 
-        foreach ($newRows as $row) {
-            $newColumns = [];
-            foreach ($row->columns as $columnIndex => $column) {
-                if (isset($columnsExist[$columnIndex])) {
-                    $newColumns[] = $column;
-                }
+        // rearrange columnIndex in rows
+        $oldColumnIndexToNewColumnIndexMapping = array_flip(array_keys($availableCols));
+        foreach ($matrixCollection->rows as $row) {
+            $newCols = [];
+            foreach ($row->columns as $oldColIndex => $col) {
+                $newColIndex = $oldColumnIndexToNewColumnIndexMapping[$oldColIndex];
+                $newCols[$newColIndex] = $col;
             }
-            $row->columns = $newColumns;
+            $row->columns = $newCols;
         }
 
-        $matrixCollection->rows = $newRows;
         return $matrixCollection;
     }
 }
