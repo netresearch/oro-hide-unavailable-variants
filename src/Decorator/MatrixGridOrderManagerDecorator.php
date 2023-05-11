@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace Netresearch\HideUnavailableVariantsBundle\Decorator;
 
+use Doctrine\Persistence\ManagerRegistry;
 use Oro\Bundle\ProductBundle\Entity\Product;
 use Oro\Bundle\ProductBundle\Provider\ProductVariantAvailabilityProvider;
 use Oro\Bundle\ShoppingListBundle\Entity\ShoppingList;
@@ -27,9 +28,10 @@ class MatrixGridOrderManagerDecorator extends MatrixGridOrderManager
         PropertyAccessor $propertyAccessor,
         ProductVariantAvailabilityProvider $variantAvailability,
         EmptyMatrixGridInterface $emptyMatrixGridManager,
+        ManagerRegistry $doctrine,
         private readonly MatrixGridOrderManager $decorated
     ) {
-        parent::__construct($propertyAccessor, $variantAvailability, $emptyMatrixGridManager);
+        parent::__construct($propertyAccessor, $variantAvailability, $emptyMatrixGridManager, $doctrine);
     }
 
     /**
