@@ -13,6 +13,7 @@ $ composer require netresearch/oro-hide-unavailable-variants-bundle
 
 - Rows and columns (for which no product variants exist) are removed from the
   inline matrix form for configurable products.
+- Non-existent variants are removed from the selection box of configurable products.
 
 ## Development
 

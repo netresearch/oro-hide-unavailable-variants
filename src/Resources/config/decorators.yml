@@ -7,3 +7,12 @@ services:
             - '@oro_product.provider.product_variant_availability_provider'
             - '@oro_shopping_list.manager.empty_matrix_grid'
             - "@.inner"
+
+    nr_hide_unavailable_variants.decorator.enum_type_handler_decorator:
+        class: 'Netresearch\HideUnavailableVariantsBundle\Decorator\EnumTypeHandlerDecorator'
+        decorates: oro_product.product_variant.type_handler.enum_type_handler
+        arguments:
+            - '@form.factory'
+            - 'Oro\Bundle\ProductBundle\Entity\Product'
+            - '@oro_entity_config.config_manager'
+            - "@.inner"
