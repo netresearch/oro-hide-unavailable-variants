@@ -13,6 +13,7 @@ table to choose the right version to install:
 |-------------------------------|-------------------|
 | 1.0.*                         | >=5.0.0   <=5.0.8 |
 | 2.0.*                         | >=5.0.9   <5.1.0  |
+| 3.0.*                         | 5.1.*             |
 
 ### Composer Installation
 
