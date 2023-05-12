@@ -5,6 +5,17 @@ storefront, if an applicable variant product does not exist.
 
 ## Installation
 
+### Requirements
+The Bundle is not synchronized with the ORO development release cycle, look at this
+table to choose the right version to install:
+
+| HideUnavailableVariantsBundle | ORO Commerce      |
+|-------------------------------|-------------------|
+| 1.0.*                         | >=5.0.0   <=5.0.8 |
+| 2.0.*                         | >=5.0.9   <5.1.0  |
+
+### Composer Installation
+
 ```bash
 $ composer require netresearch/oro-hide-unavailable-variants-bundle
 ```
