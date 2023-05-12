@@ -9,6 +9,11 @@ storefront, if an applicable variant product does not exist.
 $ composer require netresearch/oro-hide-unavailable-variants-bundle
 ```
 
+## Features
+
+- Rows and columns (for which no product variants exist) are removed from the
+  inline matrix form for configurable products.
+
 ## Development
 
 ### Code Style and Static Analysis

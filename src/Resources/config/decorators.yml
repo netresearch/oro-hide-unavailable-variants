@@ -1,0 +1,9 @@
+services:
+    nr_hide_unavailable_variants.decorator.matrix_grid_order_manager_decorator:
+        class: 'Netresearch\HideUnavailableVariantsBundle\Decorator\MatrixGridOrderManagerDecorator'
+        decorates: oro_shopping_list.provider.matrix_grid_order_manager
+        arguments:
+            - '@property_accessor'
+            - '@oro_product.provider.product_variant_availability_provider'
+            - '@oro_shopping_list.manager.empty_matrix_grid'
+            - "@.inner"
