@@ -38,7 +38,7 @@ class MatrixGridOrderManagerDecorator extends MatrixGridOrderManager
      * Gets the matrix from the instance to be decorated and remove the rows and columns
      * for which there are no variant products
      */
-    public function getMatrixCollection(Product $product, ShoppingList $shoppingList = null): MatrixCollection
+    public function getMatrixCollection(Product $product, ?\Oro\Bundle\ShoppingListBundle\Entity\ShoppingList $shoppingList = null): MatrixCollection
     {
         $matrixCollection = $this->decorated->getMatrixCollection($product, $shoppingList);
 
