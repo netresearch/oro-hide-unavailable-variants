@@ -20,7 +20,7 @@
     ],
     "require": {
         "php": ">=8.2",
-        "oro/commerce": "5.1.*"
+        "oro/commerce": "6.0.*"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "~3.13.2",
