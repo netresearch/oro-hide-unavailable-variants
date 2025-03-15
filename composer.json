@@ -23,7 +23,7 @@
         "oro/commerce": "5.1.*"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "~3.13.2",
+        "friendsofphp/php-cs-fixer": "~3.72.0",
         "oro/phpstan-rules": "^2.0",
         "phpstan/extension-installer": "^1.2",
         "rector/rector": "*",
