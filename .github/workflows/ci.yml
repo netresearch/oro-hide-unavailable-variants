@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+permissions: {}
+
+jobs:
+  analysis:
+    uses: netresearch/.github/.github/workflows/php-ci.yml@main
+    permissions:
+      contents: read
+    with:
+      # oro/platform 5.1.x requires php ~8.2.0.
+      php-versions: '["8.2"]'
+      # PHP extensions oro/platform 5.1 requires beyond setup-php's defaults.
+      extensions: "gd, intl, pcntl, soap, zip"
+      # Runs `composer run analysis` (phpcs, rector --dry-run, phpstan) so CI
+      # checks exactly what the script checks locally; the step is labelled
+      # "PHPStan" by the reusable.
+      phpstan-cmd: "composer run analysis"
+      # The bundle has no PHPUnit suite.
+      run-phpunit: false
