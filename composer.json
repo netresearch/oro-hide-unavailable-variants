@@ -52,6 +52,42 @@
             "symfony/flex": true,
             "symfony/runtime": true,
             "phpstan/extension-installer": true
+        },
+        "audit": {
+            "ignore": {
+                "PKSA-93qv-9n9h-6k6p": "CVE-2026-55767 in guzzlehttp/guzzle: oro/platform 5.1.x pins guzzlehttp/guzzle to ~7.5.0, which excludes the fix (7.12.1); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-bbs6-q5q9-f3t4": "CVE-2026-67353 in guzzlehttp/guzzle: oro/platform 5.1.x pins guzzlehttp/guzzle to ~7.5.0, which excludes the fix (7.15.1); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-bcdd-5xc7-gwfb": "CVE-2026-59883 in guzzlehttp/guzzle: oro/platform 5.1.x pins guzzlehttp/guzzle to ~7.5.0, which excludes the fix (7.12.3); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-cnw1-2ytm-cgr8": "CVE-2026-69245 in guzzlehttp/guzzle: oro/platform 5.1.x pins guzzlehttp/guzzle to ~7.5.0, which excludes the fix (7.15.2); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-fy2t-3c5f-827y": "CVE-2026-67354 in guzzlehttp/guzzle: oro/platform 5.1.x pins guzzlehttp/guzzle to ~7.5.0, which excludes the fix (7.15.1); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-gcrk-3vtt-1r14": "CVE-2026-69246 in guzzlehttp/guzzle: oro/platform 5.1.x pins guzzlehttp/guzzle to ~7.5.0, which excludes the fix (7.15.2); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-k22t-f949-t9g6": "CVE-2026-55568 in guzzlehttp/guzzle: oro/platform 5.1.x pins guzzlehttp/guzzle to ~7.5.0, which excludes the fix (7.12.1); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-pwsk-hy21-4gby": "CVE-2026-67339 in guzzlehttp/guzzle: oro/platform 5.1.x pins guzzlehttp/guzzle to ~7.5.0, which excludes the fix (7.14.2); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-qxvb-2bpp-dnk6": "CVE-2026-67355 in guzzlehttp/guzzle: oro/platform 5.1.x pins guzzlehttp/guzzle to ~7.5.0, which excludes the fix (7.15.1); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-7qs6-zvnz-h66r": "CVE-2026-55766 in guzzlehttp/psr7: oro/platform 5.1.x pins guzzlehttp/psr7 to ~2.4.0, which excludes the fix (2.12.1); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-gm5x-j3mz-71n9": "CVE-2026-49214 in guzzlehttp/psr7: oro/platform 5.1.x pins guzzlehttp/psr7 to ~2.4.0, which excludes the fix (2.10.2); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-jj5t-2zs1-dcfm": "CVE-2026-48998 in guzzlehttp/psr7: oro/platform 5.1.x pins guzzlehttp/psr7 to ~2.4.0, which excludes the fix (2.10.2); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-vznr-tgp9-fd7d": "CVE-2026-59882 in guzzlehttp/psr7: oro/platform 5.1.x pins guzzlehttp/psr7 to ~2.4.0, which excludes the fix (2.12.3); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-csyb-yc4p-mnbs": "CVE-2025-22145 in nesbot/carbon: oro/platform 5.1.x pins nesbot/carbon to ~2.65.0, which excludes the fix (2.72.6); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-z7t6-zt6p-wtng": "CVE-2026-45073 in symfony/cache: oro/platform 5.1.x pins symfony/cache to 5.4.29, which excludes the fix (5.4.52); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-w2tw-kmfg-rt9s": "CVE-2024-50343 in symfony/validator: oro/platform 5.1.x pins symfony/validator to >=5.4.17 <5.4.25, which excludes the fix (5.4.43); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-1tmc-rt7x-12w6": "CVE-2026-48806 in twig/twig: oro/platform 5.1.x pins twig/twig to ~3.5.0, which excludes the fix (3.27.0); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-2wrf-1xmk-1pky": "CVE-2024-51755 in twig/twig: oro/platform 5.1.x pins twig/twig to ~3.5.0, which excludes the fix (3.11.2); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-3mcc-k66d-pydb": "CVE-2026-46638 in twig/twig: oro/platform 5.1.x pins twig/twig to ~3.5.0, which excludes the fix (3.26.0); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-6319-ffpf-gx66": "CVE-2024-45411 in twig/twig: oro/platform 5.1.x pins twig/twig to ~3.5.0, which excludes the fix (3.11.0); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-8zx5-v2nz-58pb": "CVE-2026-49981 in twig/twig: oro/platform 5.1.x pins twig/twig to ~3.5.0, which excludes the fix (versions after 3.26.0); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-dpx1-78wg-1kqs": "CVE-2026-47732 in twig/twig: oro/platform 5.1.x pins twig/twig to ~3.5.0, which excludes the fix (3.26.0); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-fbvq-z33h-r2np": "CVE-2026-48808 in twig/twig: oro/platform 5.1.x pins twig/twig to ~3.5.0, which excludes the fix (3.27.0); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-g9zw-qxh8-pq8w": "CVE-2026-48805 in twig/twig: oro/platform 5.1.x pins twig/twig to ~3.5.0, which excludes the fix (3.27.0); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-h8hf-ytnd-5t9q": "CVE-2026-46633 in twig/twig: oro/platform 5.1.x pins twig/twig to ~3.5.0, which excludes the fix (3.26.0); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-kvv6-36cr-fkzb": "CVE-2026-46627 in twig/twig: oro/platform 5.1.x pins twig/twig to ~3.5.0, which excludes the fix (3.26.0); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-n14z-jjjg-g8vd": "CVE-2026-46635 in twig/twig: oro/platform 5.1.x pins twig/twig to ~3.5.0, which excludes the fix (3.26.0); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-sjvz-tbbr-vwth": "CVE-2026-46628 in twig/twig: oro/platform 5.1.x pins twig/twig to ~3.5.0, which excludes the fix (3.26.0); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-wwb1-81rc-pd65": "CVE-2026-47730 in twig/twig: oro/platform 5.1.x pins twig/twig to ~3.5.0, which excludes the fix (3.26.0); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-xx6c-6d96-db2w": "CVE-2026-48807 in twig/twig: oro/platform 5.1.x pins twig/twig to ~3.5.0, which excludes the fix (3.27.0); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-yd6k-t2gh-1m43": "CVE-2026-46636 in twig/twig: oro/platform 5.1.x pins twig/twig to ~3.5.0, which excludes the fix (3.27.0); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade.",
+                "PKSA-yhcn-xrg3-68b1": "CVE-2024-51754 in twig/twig: oro/platform 5.1.x pins twig/twig to ~3.5.0, which excludes the fix (3.11.2); Oro 5.1 is kept by decision, so this advisory is accepted until the framework upgrade."
+            }
         }
     }
 }
