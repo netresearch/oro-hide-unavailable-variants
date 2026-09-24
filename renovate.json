@@ -17,6 +17,13 @@
         "friendsofphp/php-cs-fixer"
       ],
       "allowedVersions": "<3.40"
+    },
+    {
+      "description": "rector 2.x needs phpstan/phpstan ^2.0; oro/phpstan-rules 1.12 pins phpstan 1.12.*.",
+      "matchPackageNames": [
+        "rector/rector"
+      ],
+      "allowedVersions": "<2.0"
     }
   ]
 }
