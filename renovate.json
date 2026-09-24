@@ -2,5 +2,21 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended"
+  ],
+  "packageRules": [
+    {
+      "description": "Oro 5.1 is kept by decision: allow 5.1 patch releases only.",
+      "matchPackageNames": [
+        "oro/commerce"
+      ],
+      "allowedVersions": "<5.2"
+    },
+    {
+      "description": "php-cs-fixer 3.40+ needs composer/semver ^3.4; oro/platform 5.1 pins ~3.3.2.",
+      "matchPackageNames": [
+        "friendsofphp/php-cs-fixer"
+      ],
+      "allowedVersions": "<3.40"
+    }
   ]
 }
