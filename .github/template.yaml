@@ -1,0 +1,13 @@
+# Managed by netresearch/.github/templates/php-module/
+# Drift from the template is blocking CI in this repo (check-template-drift.yml).
+# Record explicit exceptions under intentional-drift[] to unblock.
+#
+# For PHP modules (Magento 2 / Shopware 6 / composer SDKs). CI surface is the
+# security/quality reusables with explicit per-call-site permissions (immune to
+# a restricted default_workflow_permissions). CodeQL is via GitHub default setup
+# (a repo setting), so no codeql.yml here. Add a test workflow per repo as
+# needed and list it under intentional-drift.
+template: php-module
+intentional-drift:
+  - path: .github/workflows/security.yml
+    reason: composer-audit runs with php-version 8.2 because the package requires oro/commerce 5.1, which does not install on the shared workflow's default PHP
